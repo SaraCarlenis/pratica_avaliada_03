@@ -2,7 +2,7 @@ package exercicio1;
 
 public class Administrador extends Usuario  {
 	
-	//atributo
+	//atributo 
 	private String nivelDeAcesso;
 	
 	//método construtor

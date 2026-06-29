@@ -3,7 +3,7 @@ package exercicio2;
 public class Carro {
 	
 	String modelo;
-	int velocidade;
+	int velocidade; 
 	
 	public Carro(String modelo, int velocidade) {
 		super();

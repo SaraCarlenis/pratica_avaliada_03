@@ -7,7 +7,7 @@ public class Usuario {
 	
 	public Usuario(String nome, String email) throws Exception { //Método construtor para inicializar os dois atributos
 		
-		
+		 
 		this.nome = Validacao.validacaoNome(nome);
 		this.email = Validacao.validarEmail(email);
 	}
