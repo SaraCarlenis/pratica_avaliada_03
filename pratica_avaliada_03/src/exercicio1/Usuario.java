@@ -5,14 +5,14 @@ public class Usuario {
 	private String nome;
 	private String email;
 	
-	public Usuario(String nome, String email) throws Exception {
+	public Usuario(String nome, String email) throws Exception { //Método construtor para inicializar os dois atributos
 		
-		if(email == null || !email.contains("@")) throw new Exception("Email invalido!");
 		
-		this.nome = nome;
-		this.email = email;
+		this.nome = Validacao.validacaoNome(nome);
+		this.email = Validacao.validarEmail(email);
 	}
 
+	//métodos getters and setters
 	public String getNome() {
 		return nome;
 	}
@@ -29,7 +29,7 @@ public class Usuario {
 		this.email = email;
 	}
 	
-	public String visualizar() {
+	public String visualizar() { //método visualizar
 		return "Nome: " + this.nome + " | Email: " + this.email;
 	}
 	

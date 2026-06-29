@@ -5,29 +5,46 @@ public class TesteUsuario {
 	public static void main(String[] args) {
 		
 		usuarioValido();
-		administradoValido();
+        administradorValido();
+        nomeInvalido();
+        emailInvalido();
+	}
 		
-		static void usuarioValido() {
-			System.out.println("\nCaso 1: Usuário válido");
+	static void usuarioValido() {
+		System.out.println("\nCaso 1: Usuário válido");
 		try {
-			Usuario usuarioTeste = new Usuario("nome", "email@mail.com");
-			usuarioTeste.visualizar();
+			Usuario usuarioTeste = new Usuario("Sara", "sara.cortes@gmail.com");
+			System.out.println(usuarioTeste.visualizar());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
 	}
 		
-		static void administradoValido() {
-			System.out.println("\nCaso 2: Usuário válido");
+	static void administradorValido() {
+		System.out.println("\nCaso 2:  administrador valido");
 		try {
-			Usuario usuarioTeste = new Usuario("nome", "email@mail.com");
-			usuarioTeste.visualizar();
+			Administrador usuarioTeste = new Administrador("Michell", "michel@mail.com", "Administrador");
+			System.out.println(usuarioTeste.visualizar());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
-		}
-}
+	}
 	
-
+	static void nomeInvalido() {
+		System.out.println("\nCaso 3: nome invalido");
+		try {
+			new Usuario("", "email@mail.com");
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+	}
+		
+	static void emailInvalido() {
+		System.out.println("\nCaso 4: email invalido");
+		try {
+			new Usuario("Lenys", "lenyshotmail.ar.br");
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+	}
+}
