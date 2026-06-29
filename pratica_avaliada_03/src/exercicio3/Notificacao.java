@@ -18,7 +18,7 @@ public class Notificacao {
 	}
 	
 	public void Enviar(String mensagem) {
-		 System.out.println("Enviando SMS para: " + this.destinatario + 
+		 System.out.println("Enviando SMS para: " + this.destinatario +
 				 "\nMensagem: ");
 	}
 }
