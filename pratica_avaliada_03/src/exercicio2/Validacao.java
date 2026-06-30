@@ -8,7 +8,7 @@ public class Validacao {
 		if(valor <= 0) {
 			throw new IllegalArgumentException("Digite um valor positivo para aceleração!");
 			
-		}
+		} 
 		return valor;
 	}
 		

@@ -16,6 +16,6 @@ public class Validacao {
 			throw new IllegalArgumentException("Digite um e-mail válido!");//Mensagem caso a validação for true
 		
 		return email;
-	}
+	} 
 
 }

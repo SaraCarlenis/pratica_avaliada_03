@@ -4,7 +4,7 @@ public class CarroEletrico extends Carro {
 	
 	//Atributo
 	private int nivelBateria;
-	static final int CONSUMO_POR_ACELERACAO = 2;
+	static final int CONSUMO_POR_ACELERACAO = 2; 
 
 	//Método construtor
 	public CarroEletrico(String modelo, int velocidade, int nivelBateria) throws Exception{

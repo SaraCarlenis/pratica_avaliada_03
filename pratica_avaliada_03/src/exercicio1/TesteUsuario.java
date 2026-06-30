@@ -20,7 +20,7 @@ public class TesteUsuario {
 		}
 	}
 		
-	static void administradorValido() {
+	static void administradorValido() { 
 		System.out.println("\nCaso 2:  administrador valido");
 		try {
 			Administrador usuarioTeste = new Administrador("Michell", "michel@mail.com", "Administrador");
