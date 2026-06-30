@@ -2,12 +2,14 @@ package exercicio3;
 
 public class NotificacaoSMS extends Notificacao {
 
-	public NotificacaoSMS(String destinatario) {
+	public NotificacaoSMS(String destinatario) throws Exception {
 		super(destinatario);
 	}
-	
-	public void enviar(String mensagem) {
-		System.out.println("Enviando notificação via SMS: " + mensagem);
+	 
+	@Override
+	public void enviar(String mensagem) throws Exception {
+		Validacao.validaMensagem(mensagem);
+		System.out.println("Enviando notificação via SMS para: " + getDestinatario() + "\nMensagem: " + mensagem);
 	}
 
 }

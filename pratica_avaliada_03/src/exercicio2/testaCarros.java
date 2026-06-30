@@ -19,7 +19,10 @@ public class testaCarros {
 	}
 	
 	static void validaAceleracao() {
-		System.out.println("\nValida aceleração ->");
+		System.out.println("");
+		System.out.println("*************************************************************");
+		System.out.println("	      Valida aceleração                                 ");
+		System.out.println("***********************************************************\n");
 		CarroEletrico carroEletricoAceleracao = criarCarroEletrico("Tesla Model 3", 0, 20);
 		System.out.println(carroEletricoAceleracao.visualizar());
 		carroEletricoAceleracao.acelerar(30);
@@ -27,13 +30,18 @@ public class testaCarros {
 	}
 	
 	static void testaVisualizar() {
-		System.out.println("Validando se as informações foram anexadas corretamente -> ");
+		System.out.println("*************************************************************");
+		System.out.println("   Validando se as informações foram anexadas corretamente   ");
+		System.out.println("***********************************************************\n");
 		CarroEletrico carroEletricoTeste = criarCarroEletrico("Mustang", 50, 80);
 		System.out.println(carroEletricoTeste.visualizar());
 	}
 	
 	static void dadosInvalidos() {
-		System.out.println("\nValida se os dados inseridos são validos ->");
+		System.out.println("\n");
+		System.out.println("***********************************************************\n");
+		System.out.println("         Valida se os dados inseridos são validos            ");
+		System.out.println("***********************************************************\n");
 		try {
 			CarroEletrico validaCarroEletrico = new CarroEletrico("", 70, -10);
 			validaCarroEletrico.visualizar();

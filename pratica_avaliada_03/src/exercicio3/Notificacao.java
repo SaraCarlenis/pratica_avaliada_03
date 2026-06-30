@@ -4,9 +4,8 @@ public class Notificacao {
 	
 	private String destinatario;
 
-	public Notificacao(String destinatario) {
-		super();
-		this.destinatario = destinatario;
+	public Notificacao(String destinatario) throws Exception {
+		this.destinatario = Validacao.validaDestinatario(destinatario);
 	}
 
 	public String getDestinatario() {
@@ -17,7 +16,8 @@ public class Notificacao {
 		this.destinatario = destinatario;
 	}
 	
-	public void Enviar(String mensagem) {
+	public void enviar(String mensagem) throws Exception {
+		Validacao.validaMensagem(mensagem);
 		 System.out.println("Enviando SMS para: " + this.destinatario +
 				 "\nMensagem: ");
 	}
